@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import Navbar from './Navbar';
 import Jumbo from './Jumbotron'
+import ServiceList from './ServiceList';
+import company from '../Mock_Data/companies.json';
+
 
 class AppComponent extends Component {
-
-  componentWillReceiveProps(props) {
-    console.log(this.props.testt);
-  }
 
   render() {
 
@@ -17,9 +16,13 @@ class AppComponent extends Component {
           <Navbar />
           <Jumbo />
         </div>
+        <div>
+          <ServiceList companies={company} />
+        </div>
       </div>
     );
   }
+
 }
 
 export default AppComponent;
