@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
 class AppComponent extends Component {
-  constructor(props) {
-    super(props);
 
+  componentWillReceiveProps(props) {
+    console.log(this.props.testt);
   }
   
   render() {
