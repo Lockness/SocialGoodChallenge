@@ -2,7 +2,7 @@ import React from 'react';
 import {Navbar, Nav, NavItem, DropdownButton, MenuItem, NavDropdown} from 'react-bootstrap';
 
 const Navbarr = () => (
-  <Navbar inverse collapseOnSelect>
+  <Navbar inverse collapseOnSelect fixedTop>
     <Navbar.Header>
       <Navbar.Brand>
         <a href="#">React-Bootstrap</a>
