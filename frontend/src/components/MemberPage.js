@@ -21,7 +21,6 @@ class MemberPage extends Component {
   }
 
   render() {
-    console.log(this.state);
     return (
       <div className="MemberPage">
         <h2>Our Proud Members</h2>
