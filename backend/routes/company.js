@@ -10,12 +10,21 @@ router.get('/', function(req, res, next) {
   });
 });
 
+router.get('/search', function(req, res, next) {
+  let name = req.query.name;
+  let service = req.query.service;
+
+  Company.find({"name": new RegExp(name, 'i'), "service": new RegExp(service, 'i')}, function(err, companies) {
+    res.json({"companies": [companies]});
+  });
+});
+
 // Returns a single company
 router.get('/:id', function(req, res, next) {
   let companyID = req.params.id;
   Company.findByID(companyID, function(err, company) {
     console.log(company);
-    res.json({"company": company})
+    res.json({"company": company});
   });
 
 });
