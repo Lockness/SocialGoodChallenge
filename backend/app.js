@@ -7,8 +7,6 @@ var bodyParser = require('body-parser');
 var cors = require('cors');
 
 var app = express();
-var companyRoutes = require('./routes/company');
-var userRoutes = require('./routes/user');
 var port = 3001;
 
 // uncomment after placing your favicon in /public
@@ -19,8 +17,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Set up routes
+let companyRoutes = require('./routes/company');
+let userRoutes = require('./routes/user');
 app.use('/company', companyRoutes);
 app.use('/user', userRoutes);
+
+// Set up mongo
+let db = require('./config/db');
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
