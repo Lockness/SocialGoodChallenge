@@ -6,6 +6,7 @@ import SignUpForm from './SignUpForm';
 import LoginPage from '../containers/LoginPageContainer';
 import MemberPageComponent from '../containers/MemberPageContainer';
 import SearchForm from './SearchForm';
+import ResultsPage from './ResultsPage';
 
 class AppComponent extends Component {
 
@@ -29,6 +30,7 @@ class AppComponent extends Component {
               <Route path="/login" component={LoginPage}/>
               <Route path="/memberlist" component={MemberPageComponent}/>
               <Route path="/searchform" component={SearchForm}/>
+              <Route path="/results" component={ResultsPage}/>
 
             </div>
 
