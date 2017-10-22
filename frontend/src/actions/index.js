@@ -5,3 +5,15 @@ export const test = () => {
   }
 };
 
+export const logIn = () => {
+  return {
+    type: 'LOG_IN',
+  }
+};
+
+export const companyFetchSuc = payload => {
+  return {
+    type: 'COMPANY_FETCH_SUC',
+    payload
+  }
+};

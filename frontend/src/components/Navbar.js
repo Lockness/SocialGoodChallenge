@@ -1,15 +1,8 @@
 import React from 'react';
 import {Navbar, Nav, NavItem, DropdownButton, MenuItem, NavDropdown} from 'react-bootstrap';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom'
-import SignUpForm from "./SignUpForm"
-import Jumbo from './Jumbotron'
+import {Link} from 'react-router-dom'
 
 const Navbarr = () => (
-
     <Navbar inverse collapseOnSelect fixedTop>
       <Navbar.Header>
         <Navbar.Brand>
@@ -30,9 +23,6 @@ const Navbarr = () => (
         </Nav>
       </Navbar.Collapse>
     </Navbar>
-
-
-
 )
 
 export default Navbarr;

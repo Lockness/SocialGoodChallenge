@@ -1,16 +1,10 @@
 import React, { Component } from 'react';
 import Navbar from './Navbar';
 import Jumbo from './Jumbotron'
-import ServiceList from './ServiceList';
-import company from '../Mock_Data/companies.json';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom';
+import { BrowserRouter as Router, Route} from 'react-router-dom';
 import SignUpForm from './SignUpForm';
-import LoginPage from './LoginPage';
-import MemberPage from './MemberPage';
+import LoginPage from '../containers/LoginPageContainer';
+import MemberPageComponent from '../containers/MemberPageContainer';
 import SearchForm from './SearchForm';
 
 class AppComponent extends Component {
@@ -38,7 +32,7 @@ class AppComponent extends Component {
               <Route path="/" component={Jumbo}/>
               <Route path="/signup" component={SignUpForm}/>
               <Route path="/login" component={LoginPage}/>
-              <Route path="/memberlist" component={MemberPage}/>
+              <Route path="/memberlist" component={MemberPageComponent}/>
               <Route path="/searchform" component={SearchForm}/>
 
             </div>
