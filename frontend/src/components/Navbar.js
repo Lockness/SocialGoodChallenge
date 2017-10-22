@@ -14,7 +14,7 @@ const Navbarr = () => (
       <Navbar.Header>
         <Navbar.Brand>
         <div>
-          <Link to="/">Home</Link>
+          <Link to="/">Social Serve</Link>
           </div>
         </Navbar.Brand>
         <Navbar.Toggle />
