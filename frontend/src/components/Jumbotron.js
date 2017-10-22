@@ -1,6 +1,6 @@
 import React from 'react';
 import {Jumbotron} from 'react-bootstrap';
-import pic from './jumbotronPic.jpg';
+import pic from '../imgs/jumbotronPic.jpg';
 
 const Jumbo = () => (
 
