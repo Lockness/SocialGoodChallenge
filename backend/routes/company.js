@@ -19,7 +19,7 @@ router.get('/search', function(req, res, next) {
   let service = req.query.service;
 
   Company.find({"name": new RegExp(name, 'i'), "service": new RegExp(service, 'i')}, function(err, companies) {
-    res.json({"companies": [companies]});
+    res.json({"companies": companies});
   });
 });
 

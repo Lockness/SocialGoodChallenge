@@ -1,5 +1,6 @@
 import React from 'react';
 import {Component} from 'react';
+import axios from 'axios';
 
 class ResultsPage extends Component {
 
@@ -11,7 +12,7 @@ class ResultsPage extends Component {
 
   componentDidMount() {
     console.log(this.state);
-    const baseURL = 'http://localhost:3001/company/search';
+    const baseURL = 'http://localhost:3001/company/';
 
     axios.get(baseURL)
       .then(res => {
@@ -20,18 +21,17 @@ class ResultsPage extends Component {
   }
 
   render() {
+    console.log(this.state);
     return (
       <div className="Results">
         <ul>
-          {companies.map((company) => (
-            <li>{company.name} - {company.service}</li>
+          {this.state.companies.map((company, index) => (
+            <li key={index}>{company.name} - {company.service}</li>
           ))}
         </ul>
       </div>
     )
   }
-
-)
 
 }
 
