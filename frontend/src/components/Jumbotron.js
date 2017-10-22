@@ -1,13 +1,13 @@
 import React from 'react';
 import {Jumbotron} from 'react-bootstrap';
-import pic from './jumbotronPic.jpg';
+// import pic from './jumbotronPic.jpg';
 
 const Jumbo = () => (
-
+<div>
   <Jumbotron>
-    <img src={pic} style={{height:"500px", width:"100%"}} />
-    <p> Social Serve </p>
+    Social Serve
   </Jumbotron>
+  </div>
 )
 
 export default Jumbo;
