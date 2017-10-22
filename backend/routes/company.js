@@ -1,6 +1,10 @@
 var express = require('express');
 var Company = require('../model/company');
+let cors = require('cors');
 var router = express.Router();
+
+// Allow CORS
+router.use(cors());
 
 // Returns list of companys
 router.get('/', function(req, res, next) {
