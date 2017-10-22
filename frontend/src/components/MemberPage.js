@@ -5,8 +5,8 @@ const MemberPage = ({companies}) => (
     <h2>Our Proud Members</h2>
     <div className="member-list">
       <ul>
-        {companies.map((company) => (
-          <li>{company.name}</li>
+        {companies.map((company, index) => (
+          <li key={index} >{company.name}</li>
         ))}
       </ul>
     </div>
