@@ -5,6 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var cors = require('cors');
+var mongoose = require('mongoose');
 
 var app = express();
 var port = 3001;
@@ -24,7 +25,7 @@ app.use('/company', companyRoutes);
 app.use('/user', userRoutes);
 
 // Set up mongo
-let db = require('./config/db');
+mongoose.connect('mongodb://localhost/socialserve');
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
