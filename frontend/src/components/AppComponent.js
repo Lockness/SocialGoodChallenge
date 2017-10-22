@@ -21,14 +21,9 @@ class AppComponent extends Component {
           <Navbar />
         </div>
         <div>
-
-
-
             <div>
               <ul>
               </ul>
-
-              <div style={{paddingTop:"40px"}}></div>
               <Route path="/" component={Jumbo}/>
               <Route path="/signup" component={SignUpForm}/>
               <Route path="/login" component={LoginPage}/>
@@ -36,8 +31,6 @@ class AppComponent extends Component {
               <Route path="/searchform" component={SearchForm}/>
 
             </div>
-
-
 
         </div>
         </div>
